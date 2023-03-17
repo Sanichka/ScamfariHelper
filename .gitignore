@@ -22,3 +22,9 @@ go.work
 
 # GoLand files
 .idea/*
+
+# Wallets file ignore
+wallets.txt
+
+# Exclude logs
+*.log
