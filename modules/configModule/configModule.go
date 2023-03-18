@@ -8,6 +8,7 @@ import (
 var WALLETS_FILE = "wallets.txt"
 var FOUND_AUDIO_FILE = "old.wav"
 var NOT_FOUND_AUDIO_FILE = "new.wav"
+var AUTO_UPDATE_WALLETS = false
 
 func LoadConfig(filename string) bool {
 	viper.SetConfigName(filename)
@@ -25,6 +26,7 @@ func LoadConfig(filename string) bool {
 	if len(viper.GetString("NOT_FOUND_AUDIO_FILE")) >= 4 {
 		NOT_FOUND_AUDIO_FILE = viper.GetString("NOT_FOUND_AUDIO_FILE")
 	}
+	AUTO_UPDATE_WALLETS = viper.GetBool("AUTO_UPDATE_WALLETS")
 
 	return true
 }

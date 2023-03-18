@@ -86,7 +86,7 @@ func ReadKeyboardInput(wg *sync.WaitGroup) {
 				if lastKey == "162" {
 					//fmt.Printf("CTRL+C pressed: Last key:%v Current key: %v\n", lastKey, currentKey)
 					time.Sleep(20 * time.Millisecond)
-					ClipboardContent = readClipboard()
+					ClipboardContent = strings.TrimSpace(readClipboard())
 					//fmt.Println("ClipboardContent:", ClipboardContent)
 					// Validate string length in order to not annoy on each Ctrl+c press
 					if len(ClipboardContent) >= 30 {
@@ -97,6 +97,9 @@ func ReadKeyboardInput(wg *sync.WaitGroup) {
 						case false:
 							//fmt.Println("Streaming NOT found audio file")
 							go audio.StreamAudio(configModule.NOT_FOUND_AUDIO_FILE)
+							if configModule.AUTO_UPDATE_WALLETS {
+								UpdateFile(ClipboardContent)
+							}
 						default:
 							Logger.Println("Error in switch IsDuplicate. Default case.")
 						}
@@ -117,4 +120,17 @@ func ReadKeyboardInput(wg *sync.WaitGroup) {
 
 func readClipboard() string {
 	return string(clipboard.Read(clipboard.FmtText))
+}
+
+func UpdateFile(newWallet string) {
+	WalletsList = append(WalletsList, newWallet)
+	f, err := os.OpenFile(configModule.WALLETS_FILE, os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0600)
+	if err != nil {
+		panic(err)
+	}
+
+	defer f.Close()
+	if _, err = f.WriteString(newWallet + " \n"); err != nil {
+		panic(err)
+	}
 }
