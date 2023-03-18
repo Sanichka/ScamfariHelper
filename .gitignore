@@ -25,6 +25,7 @@ go.work
 
 # Wallets file ignore
 wallets.txt
+*.txt
 
 # Exclude logs
 *.log
