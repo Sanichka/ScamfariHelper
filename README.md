@@ -25,3 +25,9 @@ For any bugs, preferably check your latest .log file for errors and ensure all f
 # Контактна інформація
 З будь-якими запитаннями звертайтесь в офіційну [групу Telegram Scamfari](https://t.me/scamfari_public)
 При виявленні будь-яких помилок перш за все перевірите останній .log файл на наявність помилок і переконайтеся, що всі файли присутні і файл cfg.env заповнено іменами файлів. Якщо ви все ще стикаєтеся з будь-якою помилкою, заповніть [new issue](https://github.com/Sanichka/ScamfariHelper/issues/new/choose). Список відомих помилок [GitHub Issues](https://github.com/Sanichka/ScamfariHelper/issues).
+
+# Project Support
+Current development time 7 hours. Donations will support and encourage project development!
+Поточний час розробки 7 годин. Пожертви підтримають та заохочуватимуть розвиток проекту!
+**[Donate](https://send.monobank.ua/jar/3kQv2UwkhF)**
+![Donate QR code](https://i.imgur.com/mL5LpwZ.jpeg)

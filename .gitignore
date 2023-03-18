@@ -29,3 +29,6 @@ wallets.txt
 
 # Exclude logs
 *.log
+
+# Releases zip files ignore
+*.zip
