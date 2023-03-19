@@ -27,6 +27,8 @@ In case it's already in file old.wav will be played.
 For support write in official telegram group: https://t.me/scamfari_public
 `)
 	fmt.Println("Wallets in file = ", len(searchModule.WalletsList))
+	fmt.Println("Automatically update file with wallets = ", configModule.AUTO_UPDATE_WALLETS)
+	fmt.Println("Wallet validation = ", configModule.WALLET_VALIDATION)
 	WG.Add(1)
 	searchModule.ReadKeyboardInput(WG)
 	defer WG.Wait()
