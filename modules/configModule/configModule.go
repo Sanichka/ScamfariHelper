@@ -10,6 +10,7 @@ var FOUND_AUDIO_FILE = "old.wav"
 var NOT_FOUND_AUDIO_FILE = "new.wav"
 var AUTO_UPDATE_WALLETS = false
 var WALLET_VALIDATION = true
+var HAPI_VALIDATION = true
 
 func LoadConfig(filename string) bool {
 	viper.SetConfigName(filename)
@@ -29,6 +30,7 @@ func LoadConfig(filename string) bool {
 	}
 	AUTO_UPDATE_WALLETS = viper.GetBool("AUTO_UPDATE_WALLETS")
 	WALLET_VALIDATION = viper.GetBool("WALLET_VALIDATION")
+	HAPI_VALIDATION = viper.GetBool("HAPI_VALIDATION")
 
 	return true
 }

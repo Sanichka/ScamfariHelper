@@ -3,6 +3,7 @@ package searchModule
 import (
 	"ScamfariHelper/modules/audio"
 	"ScamfariHelper/modules/configModule"
+	"ScamfariHelper/modules/hapiModule"
 	"ScamfariHelper/modules/keyboardCapture"
 	. "ScamfariHelper/modules/logModule"
 	"bufio"
@@ -75,6 +76,13 @@ func IsDuplicate(wallet string) bool {
 	for _, v := range WalletsList {
 		if v == wallet {
 			return true
+		}
+	}
+	if configModule.HAPI_VALIDATION {
+		for _, v := range hapiModule.HapiDB {
+			if v.Wallet == wallet {
+				return true
+			}
 		}
 	}
 	return false

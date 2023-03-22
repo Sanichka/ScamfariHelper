@@ -2,6 +2,7 @@ package main
 
 import (
 	"ScamfariHelper/modules/configModule"
+	"ScamfariHelper/modules/hapiModule"
 	"ScamfariHelper/modules/logModule"
 	"ScamfariHelper/modules/searchModule"
 	"fmt"
@@ -29,6 +30,10 @@ For support write in official telegram group: https://t.me/scamfari_public
 	fmt.Println("Wallets in file = ", len(searchModule.WalletsList))
 	fmt.Println("Automatically update file with wallets = ", configModule.AUTO_UPDATE_WALLETS)
 	fmt.Println("Wallet validation = ", configModule.WALLET_VALIDATION)
+	fmt.Println("HAPI_VALIDATION = ", configModule.HAPI_VALIDATION)
+	if configModule.HAPI_VALIDATION {
+		hapiModule.ReadJSON()
+	}
 	WG.Add(1)
 	searchModule.ReadKeyboardInput(WG)
 	defer WG.Wait()

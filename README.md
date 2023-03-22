@@ -27,7 +27,7 @@ For any bugs, preferably check your latest .log file for errors and ensure all f
 При виявленні будь-яких помилок перш за все перевірите останній .log файл на наявність помилок і переконайтеся, що всі файли присутні і файл cfg.env заповнено іменами файлів. Якщо ви все ще стикаєтеся з будь-якою помилкою, заповніть [new issue](https://github.com/Sanichka/ScamfariHelper/issues/new/choose). Список відомих помилок [GitHub Issues](https://github.com/Sanichka/ScamfariHelper/issues).
 
 # Project Support
-Current development time 10 hours. Donations will support and encourage project development!
-Поточний час розробки 10 годин. Пожертви підтримають та заохочуватимуть розвиток проекту!
+Current development time 12 hours. Donations will support and encourage project development!
+Поточний час розробки 12 годин. Пожертви підтримають та заохочуватимуть розвиток проекту!
 **[Donate](https://send.monobank.ua/jar/3kQv2UwkhF)**
 ![Donate QR code](https://i.imgur.com/mL5LpwZ.jpeg)
